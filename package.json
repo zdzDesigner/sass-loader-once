@@ -1,0 +1,42 @@
+{
+  "name": "sass-loader-once",
+  "version": "0.0.1",
+  "description": "Sass loader once for webpack",
+  "main": "index.js",
+  "scripts": {
+    "create-spec": "node test/tools/runCreateSpec.js",
+    "pretest": "node test/tools/runCreateSpec.js",
+    "test": "mocha -R spec",
+    "posttest": "jshint index.js test",
+    "test-bootstrap-sass": "webpack-dev-server --config test/bootstrapSass/webpack.config.js --content-base ./test/bootstrapSass",
+    "test-source-map": "webpack-dev-server --config test/sourceMap/webpack.config.js --content-base ./test/sourceMap",
+    "test-watch": "webpack --config test/watch/webpack.config.js",
+    "test-hmr": "webpack-dev-server --config test/hmr/webpack.config.js --content-base ./test/hmr --hot --inline",
+    "test-spec": "mocha -R spec test/spec.test.js"
+  },
+  "keywords": [
+    "sass",
+    "libsass",
+    "webpack",
+    "loader-once"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zdzDesigner/sass-loader-once.git"
+  },
+  "author": {
+    "name": "zdzDesigner"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "node-sass": "^3.4.2",
+    "node-sass-import-once": "^1.2.0",
+    "webpack": "^1.12.6"
+  },
+  "dependencies": {
+    "async": "^1.4.0",
+    "loader-utils": "^0.2.5",
+    "object-assign": "^4.0.1"
+  },
+  "devDependencies": {}
+}
