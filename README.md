@@ -9,6 +9,45 @@ The sass-loader-once requires [sass-loader](https://github.com/jtangelder/sass-l
 as [`peerDependency`](https://docs.npmjs.com/files/package.json#peerdependencies). Thus you are able to specify the required versions accurately.
 
 ---
+## dome
+``` js
+
+module.exports = {
+	...
+	module:{
+		loaders:[
+			{
+                test: /\.scss$/,loader:"css!sass-loader-once"
+                
+            },
+			...
+		]
+
+	...
+}
+
+```
+
+separate css output file 
+
+``` js
+
+module.exports = {
+	...
+	module:{
+		loaders:[
+			{
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract('css!sass-loader-once')
+            },
+			...
+		]
+
+	...
+}
+
+```
+
 
 ## License
 
